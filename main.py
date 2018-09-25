@@ -63,19 +63,19 @@ def new_contact(Person):
     flag = True
     yesNo = ''
     while flag:
-        yesNo = input("\n\nDo you want to add a new contact?  Y/N\t")
-        yesNo = yesNo.upper()
-        print(type(yesNo))
-    if yesNo in ['Y','YES']:
-        print("\nYou want to add a contact.\n")
-        flag = False
-    elif yesNo == "N":
-        print("\nYou don't want to add a new contact.\n")
-        flag = False
-    elif yesNo == "QUIT":
-        flag = False
-    else:
-        flag = True
+        yesNo = input("\n\nDo you want to add a new contact?  Y/N\t").upper()
+    
+		if yesNo in ['Y','YES']:
+			print("\nYou want to add a contact.\n")
+			flag = False
+		elif yesNo in ['N','NO']:
+			print("\nYou don't want to add a new contact.\n")
+			flag = False
+		elif yesNo in ['Q','QUIT']:
+		print("\nExiting.\n")
+			flag = False
+		else:
+			flag = True
 
 
 
